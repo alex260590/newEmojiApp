@@ -41,6 +41,7 @@
                         <segue destination="POE-4S-WWh" kind="show" identifier="segueHomeToCool" id="zjt-ky-jiQ"/>
                         <segue destination="QBP-hM-2oM" kind="show" identifier="segueHomeToHappy" id="esx-1V-G1D"/>
                         <segue destination="cgD-kP-p0r" kind="show" identifier="segueHomeToAngry" id="Xaq-xr-dbv"/>
+                        <segue destination="bjF-Ky-Dok" kind="show" identifier="segueHomeToEmoji" id="oMx-Ov-tv3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gE-XO-Db0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -82,6 +83,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mXj-AL-7Nw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1342" y="-204"/>
+        </scene>
+        <!--Emoji View Controller-->
+        <scene sceneID="HlB-Jf-wka">
+            <objects>
+                <viewController id="bjF-Ky-Dok" customClass="EmojiViewController" customModule="newEmojiProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xDp-5I-lzq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😎" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsB-gF-Lvm">
+                                <rect key="frame" x="63" y="164" width="249" height="273.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="229"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="myLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaA-eL-Lgo">
+                                <rect key="frame" x="100" y="616.5" width="175" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JsB-gF-Lvm" firstAttribute="centerX" secondItem="xDp-5I-lzq" secondAttribute="centerX" id="Rhv-IF-fDb"/>
+                            <constraint firstItem="FaA-eL-Lgo" firstAttribute="leading" secondItem="RKx-NH-D4S" secondAttribute="leading" constant="100" id="UcG-y5-9m0"/>
+                            <constraint firstItem="FaA-eL-Lgo" firstAttribute="centerX" secondItem="xDp-5I-lzq" secondAttribute="centerX" id="Yo8-EO-e6A"/>
+                            <constraint firstItem="RKx-NH-D4S" firstAttribute="trailing" secondItem="FaA-eL-Lgo" secondAttribute="trailing" constant="100" id="oJf-aI-1oY"/>
+                            <constraint firstItem="RKx-NH-D4S" firstAttribute="bottom" secondItem="FaA-eL-Lgo" secondAttribute="bottom" constant="30" id="pld-KG-eLg"/>
+                            <constraint firstItem="JsB-gF-Lvm" firstAttribute="top" secondItem="RKx-NH-D4S" secondAttribute="top" constant="100" id="vbg-4Y-aWk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RKx-NH-D4S"/>
+                    </view>
+                    <connections>
+                        <outlet property="emojiLabel" destination="FaA-eL-Lgo" id="CAi-7O-5Ua"/>
+                        <outlet property="emojiPicture" destination="JsB-gF-Lvm" id="3vG-WE-rg6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mwY-XQ-oyi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-234.40000000000001" y="854.1229385307347"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="bqn-vL-bIh">

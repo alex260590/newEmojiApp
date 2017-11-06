@@ -10,7 +10,7 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
     
-    var emojisArray = ["😃 Happy", "😞 Sad", "😎 Cool", "😡 Angry"]
+    var emojisArray = ["😃", "😞", "😎", "😡"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +30,15 @@ class HomeTableViewController: UITableViewController {
         
         return cell
     }
-    
+ 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        let selectedEmoji = emojisArray[indexPath.row]
+        performSegue(withIdentifier: "segueHomeToEmoji", sender: selectedEmoji)
+        
+        
+        
+        /*
         if indexPath.row == 0 {
             performSegue(withIdentifier: "segueHomeToHappy", sender: nil)
         }
@@ -48,7 +54,13 @@ class HomeTableViewController: UITableViewController {
         else {
             performSegue(withIdentifier: "segueHomeToAngry", sender: nil)
         }
+        */
     
+    }
+ 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let emojiConstant = segue.destination as! EmojiViewController
+        emojiConstant.emojiID = sender as! String
     }
     
 }
